@@ -46,16 +46,12 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "React Developer",
     icon: mobile,
   },
   {
     title: "Backend Developer",
     icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
   },
 ];
 
@@ -116,11 +112,11 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
+    title: "B-Tech(Civil Engineering)",
+    company_name: "Bhagalpur college of Engineering,Bhagalpur",
     icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    iconBg: "#FFFFFF",
+    date: "August 2018 - August 2022",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",

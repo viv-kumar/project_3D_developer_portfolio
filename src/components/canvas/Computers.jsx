@@ -1,12 +1,9 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-
 import CanvasLoader from "../Loader";
-
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
-
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor='black' />
@@ -35,7 +32,7 @@ const ComputersCanvas = () => {
   useEffect(() => {
     // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 500px)");
-
+      console.log(mediaQuery)
     // Set the initial value of the `isMobile` state variable
     setIsMobile(mediaQuery.matches);
 
@@ -61,7 +58,7 @@ const ComputersCanvas = () => {
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
-      <Suspense fallback={<CanvasLoader />}>
+      <Suspense fallback={<CanvasLoader/>}>
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
@@ -69,7 +66,6 @@ const ComputersCanvas = () => {
         />
         <Computers isMobile={isMobile} />
       </Suspense>
-
       <Preload all />
     </Canvas>
   );
